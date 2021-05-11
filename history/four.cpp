@@ -151,6 +151,7 @@ public:
 
     /** Push element x onto stack. */
     void push(int x) {
+        // queue1此时为空，压栈操作先把x放到队列的头部，即为栈顶。
         queue1.push(x);
         while (!queue0.empty())
         {
