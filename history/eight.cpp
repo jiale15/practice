@@ -2,7 +2,7 @@
  * @Author: jiale 
  * @Date: 2021-05-12 10:58:11 
  * @Last Modified by: jiale
- * @Last Modified time: 2021-05-12 15:30:06
+ * @Last Modified time: 2021-05-13 10:12:00
  */
 // 844. 比较含退格的字符串
 // 给定 S 和 T 两个字符串，当它们分别被输入到空白的文本编辑器后，判断二者是否相等，并返回结果。 # 代表退格字符。
@@ -36,6 +36,7 @@ using namespace std;
 class Solution {
 public:
     bool backspaceCompare(string s, string t) {
+        // 分别放到两个栈中，然后对比两个栈中的元素是否相等
         stack<char> stack0, stack1;
         char back = '#';
         for (auto i : s)
