@@ -39,14 +39,24 @@ using namespace std;
 class Solution {
 public:
     string removeOuterParentheses(string S) {
+        while (1)
+        {
+            if (S.size() == 0)
+                return S;
+            S = S.substr(1);
+            if (S.front() == ')')
+                S = S.substr(1);
+            else break;
+        }
         stack<string> stack0;
-        // if ()
+        for (auto s : S)
         return S;
     }
 };
 int main()
 {
-    string S = "(()())(())";
+    string S = "()()";
+    // string S = "(()())(())";
     Solution *solu = new Solution();
     cout << solu->removeOuterParentheses(S);
     return 0;
